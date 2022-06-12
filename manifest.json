@@ -28,6 +28,28 @@
       "name": "API Token",
       "description": "Token used to authenticate to ETAPI",
       "default_value": ""
+    },
+    {
+      "id": "open_links_in_local_instance",
+      "type": "select",
+      "name": "Open links in local instance",
+      "description": "Open links in local Trilium instance instead of the remote server.",
+      "options": [
+        { "value": 0, "text": "no, open on server" },
+        { "value": 1, "text": "yes, open locally" }
+      ],
+      "default_value": 0
+    },
+    {
+      "id": "local_port",
+      "type": "select",
+      "name": "Local port",
+      "description": "Port of the local Trilium instance",
+      "options": [
+        { "value": 37840, "text": "37840 - Prod" },
+        { "value": 37740, "text": "37740 - Dev" }
+      ],
+      "default_value": 37840
     }
   ]
 }
