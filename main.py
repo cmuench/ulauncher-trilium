@@ -3,7 +3,7 @@ import re
 import requests as req
 from ulauncher.api.client.Extension import Extension
 from ulauncher.api.client.EventListener import EventListener
-from ulauncher.api.shared.event import KeywordQueryEvent, ItemEnterEvent
+from ulauncher.api.shared.event import KeywordQueryEvent
 from ulauncher.api.shared.item.ExtensionResultItem import ExtensionResultItem
 from ulauncher.api.shared.action.RenderResultListAction import RenderResultListAction
 from ulauncher.api.shared.action.HideWindowAction import HideWindowAction
@@ -22,7 +22,7 @@ class TriliumExtension(Extension):
 
         keyword = self.preferences["kw"]
 
-        items.append(ExtensionResultItem(icon='images/trilium.png',
+        items.append(ExtensionResultItem(icon='images/bx-search.png',
                                          name='Search note',
                                          description='Search Note ... (latest note on top)',
                                          on_enter=SetUserQueryAction("%s search " % keyword)))
@@ -52,8 +52,7 @@ class TriliumExtension(Extension):
 
             if 'results' in r:
                 for row in r['results']:
-
-                    items.append(ExtensionResultItem(icon='images/trilium.png',
+                    items.append(ExtensionResultItem(icon='images/bx-file-blank.png',
                                                      name=row["title"],
                                                      description=row["dateCreated"],
                                                      on_enter=OpenUrlAction(self.get_server_url() + '/#root/' + row[
