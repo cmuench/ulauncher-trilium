@@ -1,0 +1,33 @@
+{
+  "required_api_version": "^2.0.0",
+  "name": "Trilium",
+  "description": "Search trilium notes",
+  "developer_name": "Christian Münch",
+  "icon": "images/trilium.png",
+  "options": {
+    "query_debounce": 0.3
+  },
+  "preferences": [
+    {
+      "id": "kw",
+      "type": "keyword",
+      "name": "Trilium Keyword",
+      "description": "Trilium Extension",
+      "default_value": "tr"
+    },
+    {
+      "id": "server_url",
+      "type": "input",
+      "name": "Trilium Server URL",
+      "description": "URL of remote server",
+      "default_value": ""
+    },
+    {
+      "id": "api_token",
+      "type": "input",
+      "name": "API Token",
+      "description": "Token used to authenticate to ETAPI",
+      "default_value": ""
+    }
+  ]
+}
